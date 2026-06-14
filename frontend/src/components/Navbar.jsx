@@ -38,7 +38,7 @@ export default function Navbar({
           onClick={() => setOpen(false)}
           className={`flex items-center gap-2 transition-colors duration-300 ${logoColor}`}
         >
-          <span className="text-2xl leading-none">✦</span>
+          {/* <span className="text-2xl leading-none">✦</span> */}
           <span className="font-gondens text-xl tracking-wide">{logo}</span>
         </a>
 
