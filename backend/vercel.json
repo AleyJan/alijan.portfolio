@@ -1,5 +1,18 @@
 {
   "version": 2,
   "builds": [{ "src": "server.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "server.js" }]
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "methods": ["OPTIONS"],
+      "headers": {
+        "Access-Control-Allow-Origin": "https://alijan-portfolio-5kh8.vercel.app",
+        "Access-Control-Allow-Methods": "GET,POST,PUT,PATCH,DELETE,OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type,Authorization",
+        "Access-Control-Max-Age": "86400"
+      },
+      "continue": true
+    },
+    { "src": "/(.*)", "dest": "server.js" }
+  ]
 }
