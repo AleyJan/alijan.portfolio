@@ -21,7 +21,7 @@ export default function Hero({ title = "PORTFOLIO" }) {
             animate={{ y: [0, -8, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             className="select-none font-gondens leading-none text-cream"
-            style={{ fontSize: "clamp(2.8rem, 13vw, 11.5rem)", letterSpacing: "-0.04em" }}
+            style={{ fontSize: "clamp(3.3rem, 13.5vw, 12rem)", letterSpacing: "-0.04em" }}
           >
             {title}
           </motion.span>
