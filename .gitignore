@@ -1,0 +1,13 @@
+node_modules
+.env
+dist
+.DS_Store
+
+# Claude Code session memory — not part of the project
+.claude/
+
+# Root-level font demo files (font is already in frontend/src/assets/fonts/)
+*.zip
+*.otf
+1001fonts-gondens-demo-eula.txt
+Readme (DEMO).txt

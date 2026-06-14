@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+@font-face {
+  font-family: "Gondens";
+  src: url("./assets/fonts/Gondens-DEMO.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #160d08;
+  color: #d9dac6;
+}
+
+/*
+  Spotlight blur overlay.
+  - This element sits ON TOP of the hero content and blurs whatever is behind it
+    via backdrop-filter.
+  - The radial mask punches a transparent hole at the cursor (--mx/--my): inside
+    the hole the overlay isn't painted, so the content shows through SHARP.
+  - Outside the hole the overlay is painted, so the content reads BLURRED.
+  - Diameter of the sharp zone is ~2 inches (≈ 200px) at standard 96dpi.
+*/
+.spotlight-blur {
+  backdrop-filter: blur(4px) brightness(0.96);
+  -webkit-backdrop-filter: blur(5px) brightness(0.96);
+  --mask: radial-gradient(
+    circle 110px at var(--mx) var(--my),
+    transparent 0%,
+    transparent 52%,
+    black 100%
+  );
+  -webkit-mask-image: var(--mask);
+  mask-image: var(--mask);
+}
+
+/*
+  Spotlight reveal for the sharp portrait copy. Inverse of .spotlight-blur:
+  OPAQUE inside the cursor circle (the sharp copy shows) and transparent
+  outside (the soft-blurred copy underneath shows instead). Same radius as the
+  section spotlight so the two stay aligned.
+*/
+.spotlight-reveal {
+  --reveal: radial-gradient(
+    circle 110px at var(--mx) var(--my),
+    black 0%,
+    black 50%,
+    transparent 100%
+  );
+  -webkit-mask-image: var(--reveal);
+  mask-image: var(--reveal);
+}
