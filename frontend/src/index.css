@@ -41,7 +41,7 @@ body {
   backdrop-filter: blur(4px) brightness(0.96);
   -webkit-backdrop-filter: blur(5px) brightness(0.96);
   --mask: radial-gradient(
-    circle 110px at var(--mx) var(--my),
+    circle 192px at var(--mx) var(--my),
     transparent 0%,
     transparent 52%,
     black 100%
@@ -58,7 +58,7 @@ body {
 */
 .spotlight-reveal {
   --reveal: radial-gradient(
-    circle 110px at var(--mx) var(--my),
+    circle 192px at var(--mx) var(--my),
     black 0%,
     black 50%,
     transparent 100%
