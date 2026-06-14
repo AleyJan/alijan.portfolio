@@ -20,8 +20,8 @@ export default function Hero({ title = "PORTFOLIO" }) {
           <motion.span
             animate={{ y: [0, -8, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="select-none font-gondens leading-none tracking-tight text-cream"
-            style={{ fontSize: "clamp(3.5rem, 19vw, 17rem)" }}
+            className="select-none font-gondens leading-none text-cream"
+            style={{ fontSize: "clamp(3.5rem, 19vw, 17rem)", letterSpacing: "-0.04em" }}
           >
             {title}
           </motion.span>
